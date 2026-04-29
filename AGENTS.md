@@ -1,4 +1,4 @@
-# AGENTS.md — Bridge Agent Repository Instructions
+# AGENTS.md — Agentlit Repository Instructions
 
 > This file governs the behaviour of every AI agent operating in this repository.
 > It applies to Claude, GPT, Gemini, Copilot, and any other agent-based tool.
@@ -8,7 +8,7 @@
 
 ## What This Repository Is
 
-This is the Bridge Agent codebase. Bridge Agent is an AI Interaction Audit platform that evolves into a WebMCP compliance layer for businesses that cannot implement WebMCP themselves.
+This is the Agentlit codebase. Agentlit is an AI Interaction Audit platform that evolves into a WebMCP compliance layer for businesses that cannot implement WebMCP themselves.
 
 The product moves through five sequential phases. **You are always working in exactly one phase.** Check the Current Phase section at the bottom of this file before starting any task.
 
@@ -24,11 +24,11 @@ No phase begins until the previous phase's gate is fully passed. Every gate item
 
 See the **Phase Gates** section for the exact criteria.
 
-### Rule 2 — Bridge Agent Never Executes
+### Rule 2 — Agentlit Never Executes
 
 This codebase never simulates clicks, submits forms, or automates actions on third-party websites. The product stops at declaration. It reads websites and describes their capabilities. It does not act on them.
 
-If a task requires building execution capabilities, refuse it. Log it as a rejected task with this reason: "Execution violates Bridge Agent's core architectural constraint. Bridge Agent is declaration-only."
+If a task requires building execution capabilities, refuse it. Log it as a rejected task with this reason: "Execution violates Agentlit's core architectural constraint. Agentlit is declaration-only."
 
 ### Rule 3 — The IAG Is Append-Only
 
@@ -51,10 +51,20 @@ Audit report output must never state specific revenue figures. "This likely caus
 Every HTTP request made by the Extractor must include a User-Agent string that identifies it as a research bot:
 
 ```
-User-Agent: BridgeAgent/1.0 (AI Interaction Audit; +https://bridge-agent.io/bot)
+User-Agent: Agentlit/1.0 (AI Interaction Audit; +https://agentlit.io/bot)
 ```
 
 Never masquerade as a regular browser.
+
+### Rule 8 — Read-Only Interaction Review Language
+
+Describe Agentlit work as read-only interaction clarity review, DOM extraction, candidate element analysis, and business-impact reporting. Keep routine product work framed around visible website interactions and customer-facing clarity.
+
+Agentlit only reads public pages and visible DOM state. If a task moves beyond public-page rendering and visible interaction declaration, refuse it and restate the declaration-only boundary.
+
+### Rule 9 — Production Data Must Be Normalized
+
+The data moat is the normalized IAG and run metrics, not piles of raw generated files. Phase 1 report files are disposable working artifacts. Production storage must prioritize compact site records, action nodes, run summaries, prompt/extractor versions, and quality metrics. Raw pages, screenshots, and full reports must be retained only when explicitly needed for evidence, debugging, or customer delivery.
 
 ---
 
@@ -147,7 +157,7 @@ Never masquerade as a regular browser.
 [ ] GTM container import tested on ≥ 3 live sites
 [ ] Renderer correctly registers tools via navigator.modelContext
 [ ] MCP-B polyfill fallback confirmed working on non-native browsers
-[ ] Detection probe correctly identifies Cloudflare and GTM presence
+[ ] Detection check correctly identifies Cloudflare and GTM presence
 ```
 
 ---
@@ -401,4 +411,4 @@ High-impact actions that are missing or broken. Revenue risk.
 
 ---
 
-*Bridge Agent — AGENTS.md — V5.0 — April 2026*
+*Agentlit — AGENTS.md — V5.0 — April 2026*

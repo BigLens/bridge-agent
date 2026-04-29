@@ -33,13 +33,13 @@ Shopify stores and WordPress sites will become WebMCP-compliant with a single pl
 
 The businesses that cannot do that — the mid-size e-commerce store on custom Magento, the insurance broker on a legacy Java stack, the SaaS company whose frontend was hand-built five years ago — have two options: pay an agency thousands of dollars to implement WebMCP manually, or stay non-compliant while AI agents route traffic to competitors who aren't.
 
-Bridge Agent is the third option.
+Agentlit is the third option.
 
 ---
 
-## What Bridge Agent Is
+## What Agentlit Is
 
-At its simplest, Bridge Agent answers one question about any website:
+At its simplest, Agentlit answers one question about any website:
 
 > **What can an AI agent do here — and what is it failing to do?**
 
@@ -198,9 +198,9 @@ prioritised before any other optimisation work.
 
 ---
 
-## What Bridge Agent Never Does
+## What Agentlit Never Does
 
-Bridge Agent stops at **declaration**. It describes what a site can do. It never does it.
+Agentlit stops at **declaration**. It describes what a site can do. It never does it.
 
 ```
 ❌  Simulates clicks
@@ -210,7 +210,7 @@ Bridge Agent stops at **declaration**. It describes what a site can do. It never
 ❌  Touches the site's source code or codebase
 ```
 
-This boundary is architectural, legal, and permanent. In Phase 5, the WebMCP tool contract tells agents what to do. The browser and the site's own JavaScript handle execution. Bridge Agent's role ends at registration.
+This boundary is architectural, legal, and permanent. In Phase 5, the WebMCP tool contract tells agents what to do. The browser and the site's own JavaScript handle execution. Agentlit's role ends at registration.
 
 ---
 
@@ -250,7 +250,7 @@ No re-analysis. No new data collection. The IAG **is** the tool contract.
 
 ## Installation (Phase 5 — No-Code Onboarding)
 
-Bridge Agent detects the best installation path automatically when you enter your URL.
+Agentlit detects the best installation path automatically when you enter your URL.
 
 ### Path A — Cloudflare Workers
 For sites behind Cloudflare's proxy. A Worker injects the Sentry script at the edge. The server is never touched.
@@ -258,7 +258,7 @@ For sites behind Cloudflare's proxy. A Worker injects the Sentry script at the e
 **Owner effort:** ~5 minutes in the Cloudflare dashboard. No developer needed.
 
 ### Path B — Google Tag Manager
-For sites with GTM installed. Download the Bridge Agent GTM Container JSON and import it in three clicks.
+For sites with GTM installed. Download the Agentlit GTM Container JSON and import it in three clicks.
 
 **Owner effort:** ~3 clicks in GTM. No developer needed.
 
@@ -267,7 +267,7 @@ For all other sites. Copy a pre-written message and send it to whoever manages t
 
 ```html
 <script
-  src="https://cdn.bridge-agent.io/sentry.js"
+  src="https://cdn.agentlit.io/sentry.js"
   data-site-key="YOUR_SITE_KEY"
   integrity="sha384-HASH"
   crossorigin="anonymous"
@@ -282,7 +282,7 @@ For all other sites. Copy a pre-written message and send it to whoever manages t
 ## Repository Structure
 
 ```
-bridge-agent/
+agentlit/
 │
 ├── AGENTS.md               ← Agent instructions (read this first)
 ├── CLAUDE.md               ← Claude-specific instructions
@@ -350,8 +350,8 @@ A Gemini API key (or equivalent LLM provider key)
 ### Install
 
 ```bash
-git clone https://github.com/your-org/bridge-agent.git
-cd bridge-agent
+git clone https://github.com/your-org/agentlit.git
+cd agentlit
 npm install
 ```
 
@@ -448,13 +448,13 @@ If the Interpreter cannot produce descriptions that a business owner reads and i
 The outreach message is the product's first impression. It must mention a specific finding, anchor to drop-offs and revenue, and create curiosity without being pushy. Iterate until it reliably produces replies.
 
 **3. Declaration only. Forever.**
-Bridge Agent stops at declaration in every phase. This is the legal foundation, the security posture, and the architectural moat. It does not move.
+Agentlit stops at declaration in every phase. This is the legal foundation, the security posture, and the architectural moat. It does not move.
 
 ---
 
 <div align="center">
 
-**Bridge Agent** — *Execute like you need money today. Build like you're going to own the market tomorrow.*
+**Agentlit** — *Execute like you need money today. Build like you're going to own the market tomorrow.*
 
 V5.0 — April 2026 — Proprietary
 
